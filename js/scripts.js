@@ -2,7 +2,26 @@ function toggleAcc(card) {
   card.classList.toggle('open');
 }
 
+function toggleMenu() {
+  const wrapper = document.querySelector('.nav-wrapper');
+  if (wrapper) wrapper.classList.toggle('menu-open');
+}
+
+function showTabMobile(id) {
+  const btn = document.querySelector(`.nav-btn[onclick*="'${id}'"]`);
+  if (btn) showTab(id, btn);
+}
+
+document.addEventListener('click', function(e) {
+  const wrapper = document.querySelector('.nav-wrapper');
+  if (wrapper && wrapper.classList.contains('menu-open') && !wrapper.contains(e.target)) {
+    wrapper.classList.remove('menu-open');
+  }
+});
+
 function showTab(id, btn) {
+  const wrapper = document.querySelector('.nav-wrapper');
+  if (wrapper) wrapper.classList.remove('menu-open');
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
   document.getElementById(id).classList.add('active');

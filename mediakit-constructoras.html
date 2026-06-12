@@ -8,6 +8,9 @@
 <meta name="description" content="Media Kit 2026 de Leyla · Miss Ecuador 2020 · +133K seguidores · 73.3% audiencia 25–44 · 91.4% audiencia femenina. Propuesta para Constructoras & Proyectos Inmobiliarios en Ecuador.">
 <meta name="author" content="Leyla · Manager: Andrés Acosta">
 <meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://media-kit.leylaec.com/mediakit-constructoras.html">
 <meta property="og:title" content="Media Kit 2026 — Leyla · Constructoras & Proyectos Inmobiliarios">
@@ -64,7 +67,11 @@
       <div class="cover-stat"><span class="cover-stat-n">37.8K</span><span class="cover-stat-l">Visitas al perfil</span></div>
       <div class="cover-stat"><span class="cover-stat-n">+81%</span><span class="cover-stat-l">Crecimiento de perfil</span></div>
     </div>
-    <button class="cover-scroll-btn" onclick="document.querySelector('.nav-wrapper').scrollIntoView({behavior:'smooth'})">Ver información ↓</button>
+    <div class="cover-btns">
+      <button class="cover-scroll-btn" onclick="document.querySelector('.nav-wrapper').scrollIntoView({behavior:'smooth'})">Ver información ↓</button>
+      <button class="cover-scroll-btn" onclick="showTabMobile('pricing')">Ver inversión</button>
+      <a class="cover-scroll-btn cover-btn-contact" href="https://wa.me/593993020005" target="_blank" rel="noopener">Contactar</a>
+    </div>
   </div>
 </div>
 
@@ -80,6 +87,9 @@
     <button class="nav-btn" onclick="showTab('pricing',this)">Inversión</button>
     <button class="nav-btn" onclick="showTab('contacto',this)">Hablemos</button>
   </nav>
+    <button class="nav-hamburger" id="navHamburger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
   <button class="nav-chevron nav-chevron-right" id="navChevRight" onclick="scrollNav(1)" aria-label="Desplazar menú a la derecha">›</button>
 </div>
 
@@ -652,5 +662,11 @@
 </div>
 
 <script src="js/scripts.js"></script>
+<!-- CTA móvil -->
+<div class="mobile-cta">
+  <button class="mobile-cta-btn" onclick="document.querySelector('.nav-wrapper').scrollIntoView({behavior:'smooth'})">Ver información</button>
+  <button class="mobile-cta-btn mobile-cta-inversion" onclick="showTabMobile('pricing')">Ver inversión</button>
+  <a class="mobile-cta-btn mobile-cta-wa" href="https://wa.me/593993020005" target="_blank" rel="noopener">Contactar</a>
+</div>
 </body>
 </html>
