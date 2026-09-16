@@ -98,6 +98,7 @@ body { font-family: 'Montserrat', sans-serif; background: var(--blanco); color: 
 
 /* ── STATS ── */
 .stats-hero { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--arena-dark); margin-bottom: 24px; }
+.stats-hero.cols-5 { grid-template-columns: repeat(5, 1fr); }
 .stat-item { background: var(--blanco-puro); padding: 26px 18px; text-align: center; }
 .stat-item.featured { background: var(--negro); }
 .stat-item.featured-vino { background: var(--vino); }
@@ -406,7 +407,7 @@ body { font-family: 'Montserrat', sans-serif; background: var(--blanco); color: 
   .problemas-grid, .why-grid, .formatos-grid, .contacto-layout,
   .perfiles-grid, .content-types, .momentos-grid,
   .geo-block, .price-cards, .packages-grid, .adicionales-grid { grid-template-columns: 1fr; }
-  .eng-grid, .stats-hero { grid-template-columns: 1fr 1fr; }
+  .eng-grid, .stats-hero, .stats-hero.cols-5 { grid-template-columns: 1fr 1fr; }
   .footer { flex-direction: column; align-items: flex-start; gap: 6px; padding: 20px 22px; }
 
   /* padding interior de bloques: demasiado ancho para móvil, aplasta el texto */
